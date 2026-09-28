@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lluvia de Ideas del Problema - Gestión de Calidad Educativa</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f8fc;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* =========================
+           ENCABEZADO
+        ========================== */
+
+        header {
+            background: linear-gradient(135deg, #1565c0, #00897b);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            font-size: 34px;
+            margin: 5px 0;
+        }
+
+        header h2 {
+            color: white;
+            border: none;
+            padding: 0;
+            margin: 10px 0;
+            font-size: 25px;
+        }
+
+        header p {
+            font-size: 18px;
+            margin: 5px;
+        }
+
+        /* =========================
+           CONTENEDOR
+        ========================== */
+
+        .contenedor {
+            max-width: 1150px;
+            margin: auto;
+            padding: 25px;
+        }
+
+        /* =========================
+           SECCIONES
+        ========================== */
+
+        .seccion {
+            background: white;
+            margin-bottom: 25px;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: #1565c0;
+            border-left: 7px solid #00897b;
+            padding-left: 12px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            color: #00897b;
+        }
+
+        /* =========================
+           PORTADA
+        ========================== */
+
+        .portada {
+            text-align: center;
+            background: linear-gradient(135deg, #e3f2fd, #e0f2f1);
+            border: 2px solid #90caf9;
+            padding: 40px;
+        }
+
+        .logo {
+            font-size: 70px;
+            margin-bottom: 10px;
+        }
+
+        .instituto {
+            font-size: 27px;
+            font-weight: bold;
+            color: #0d47a1;
+            text-transform: uppercase;
+        }
+
+        .asignatura {
+            font-size: 23px;
+            color: #00695c;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .tema {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 25px auto;
+            max-width: 850px;
+            border-left: 6px solid #1565c0;
+        }
+
+        .tema h3 {
+            color: #1565c0;
+            font-size: 24px;
+            margin-top: 0;
+        }
+
+        .datos-estudiante {
+            max-width: 850px;
+            margin: auto;
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: left;
+        }
+
+        .dato {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .dato:last-child {
+            border-bottom: none;
+        }
+
+        .dato strong {
+            color: #1565c0;
+        }
+
+        /* =========================
+           TARJETAS
+        ========================== */
+
+        .ideas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .tarjeta {
+            padding: 22px;
+            border-radius: 16px;
+            border-top: 6px solid #1565c0;
+            background: #e3f2fd;
+        }
+
+        .tarjeta h3 {
+            margin-top: 0;
+            color: #1565c0;
+        }
+
+        .docentes {
+            background: #e8f5e9;
+            border-top-color: #43a047;
+        }
+
+        .docentes h3 {
+            color: #2e7d32;
+        }
+
+        .institucion-card {
+            background: #fff3e0;
+            border-top-color: #fb8c00;
+        }
+
+        .institucion-card h3 {
+            color: #ef6c00;
+        }
+
+        .comunidad {
+            background: #f3e5f5;
+            border-top-color: #8e24aa;
+        }
+
+        .comunidad h3 {
+            color: #7b1fa2;
+        }
+
+        /* =========================
+           TABLA
+        ========================== */
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th {
+            background: #1565c0;
+            color: white;
+            padding: 14px;
+            text-align: center;
+        }
+
+        td {
+            padding: 14px;
+            border: 1px solid #ddd;
+            vertical-align: top;
+        }
+
+        tr:nth-child(even) {
+            background: #f7f9fb;
+        }
+
+        /* =========================
+           PROBLEMA
+        ========================== */
+
+        .problema {
+            background: linear-gradient(135deg, #fff8e1, #fff3cd);
+            border: 3px solid #ffb300;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .problema .icono {
+            font-size: 45px;
+        }
+
+        .problema h3 {
+            color: #e65100;
+            font-size: 25px;
+        }
+
+        .problema p {
+            font-size: 20px;
+            font-weight: bold;
+            color: #4e342e;
+        }
+
+        /* =========================
+           JUSTIFICACIÓN
+        ========================== */
+
+        .justificacion {
+            background: #e0f7fa;
+            border-left: 6px solid #00838f;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        /* =========================
+           SOLUCIONES
+        ========================== */
+
+        .soluciones {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 18px;
+            margin-top: 20px;
+        }
+
+        .solucion {
+            background: #f1f8e9;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid #c5e1a5;
+        }
+
+        .solucion .icono {
+            font-size: 35px;
+        }
+
+        /* =========================
+           CONCLUSIÓN
+        ========================== */
+
+        .conclusion {
+            background: #263238;
+            color: white;
+            padding: 28px;
+            border-radius: 18px;
+        }
+
+        .conclusion h2 {
+            color: white;
+            border-left-color: #80cbc4;
+        }
+
+        /* =========================
+           PIE DE PÁGINA
+        ========================== */
+
+        footer {
+            background: #1565c0;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 30px;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 27px;
+            }
+
+            .instituto {
+                font-size: 21px;
+            }
+
+            .asignatura {
+                font-size: 19px;
+            }
+
+            .seccion {
+                padding: 20px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     ENCABEZADO
+====================================================== -->
+
+<header>
+
+    <h1>🎓 PROYECTO DE INNOVACIÓN EDUCATIVA</h1>
+
+    <h2>La Lluvia de Ideas del Problema</h2>
+
+    <p>Gestión de Calidad Educativa</p>
+
+</header>
+
+
+<div class="contenedor">
+
+
+<!-- =====================================================
+     PORTADA
+====================================================== -->
+
+<section class="seccion portada">
+
+    <div class="logo">🎓</div>
+
+    <div class="instituto">
+        Instituto Superior Tecnológico American College
+    </div>
+
+    <div class="asignatura">
+        GESTIÓN DE CALIDAD EDUCATIVA
+    </div>
+
+
+    <div class="tema">
+
+        <h3>
+            💡 Tema del Proyecto
+        </h3>
+
+        <p>
+            <strong>La Lluvia de Ideas del Problema</strong>
+        </p>
+
+        <p>
+            Identificación y análisis de una problemática educativa
+            para el desarrollo de un proyecto de innovación.
+        </p>
+
+    </div>
+
+
+    <div class="datos-estudiante">
+
+        <div class="dato">
+            <strong>👨‍🏫 Docente:</strong>
+            MSc. Cristhian Jonathan Baque Pincay
+        </div>
+
+        <div class="dato">
+            <strong>👩‍🎓 Estudiante:</strong>
+            Roldan Chicaiza María Alicia
+        </div>
+
+        <div class="dato">
+            <strong>📚 Asignatura:</strong>
+            Gestión de Calidad Educativa
+        </div>
+
+        <div class="dato">
+            <strong>🏫 Institución de contexto:</strong>
+            Unidad Educativa “Chiriboga”
+        </div>
+
+        <div class="dato">
+            <strong>📍 Ciudad:</strong>
+            Riobamba
+        </div>
+
+        <div class="dato">
+            <strong>🎓 Nivel educativo:</strong>
+            Séptimo Año de Educación General Básica
+        </div>
+
+        <div class="dato">
+            <strong>👥 Paralelo:</strong>
+            “B”
+        </div>
+
+        <div class="dato">
+            <strong>📌 Actividad:</strong>
+            Identificación de una problemática educativa
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PROPÓSITO
+====================================================== -->
+
+<section class="seccion">
+
+    <h2>🎯 1. Propósito de la actividad</h2>
+
+    <p>
+        Identificar diferentes problemáticas presentes en el contexto
+        educativo, considerando las necesidades de los estudiantes,
+        docentes, institución y comunidad, con el propósito de seleccionar
+        una problemática concreta que pueda convertirse posteriormente
+        en el punto de partida de un proyecto de innovación educativa.
+    </p>
+
+</section>
+
+
+<!-- =====================================================
+     CONTEXTUALIZACIÓN
+====================================================== -->
+
+<section class="seccion">
+
+    <h2>🏫 2. Contextualización</h2>
+
+    <p>
+        La presente actividad se desarrolla en el contexto de la
+        <strong>Unidad Educativa “Chiriboga” de la ciudad de Riobamba</strong>,
+        específicamente con los estudiantes de
+        <strong>Séptimo Año de Educación General Básica, paralelo “B”</strong>.
+    </p>
+
+    <p>
+        La identificación de la problemática parte de una lluvia de ideas
+        en la que se consideran diferentes situaciones que pueden influir
+        en el proceso de enseñanza y aprendizaje.
+    </p>
+
+    <p>
+        El propósito es analizar estas situaciones y seleccionar una
+        problemática concreta, relevante y contextualizada que pueda
+        ser abordada posteriormente mediante una propuesta de innovación
+        educativa.
+    </p>
+
+</section>
+
+
+<!-- =====================================================
+     LLUVIA DE IDEAS
+====================================================== -->
+
+<section class="seccion">
+
+    <h2>💭 3. Lluvia de ideas</h2>
+
+    <p>
+        En esta etapa se plantearon diferentes situaciones problemáticas
+        relacionadas con los principales actores del contexto educativo:
+        estudiantes, docentes, institución y comunidad.
+    </p>
+
+
+    <div class="ideas">
+
+
+        <!-- ESTUDIANTES -->
+
+        <div class="tarjeta">
+
+            <h3>👩‍🎓 Estudiantes</h3>
+
+            <ul>
+
+                <li>Baja motivación durante las clases.</li>
+
+                <li>Poca participación en algunas actividades.</li>
+
+                <li>Dificultades para mantener la atención.</li>
+
+                <li>Escaso interés por determinadas actividades.</li>
+
+                <li>Uso limitado de recursos interactivos.</li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- DOCENTES -->
+
+        <div class="tarjeta docentes">
+
+            <h3>👨‍🏫 Docentes</h3>
+
+            <ul>
+
+                <li>Uso limitado de estrategias didácticas innovadoras.</li>
+
+                <li>Poca utilización de recursos digitales interactivos.</li>
+
+                <li>Necesidad de fortalecer la innovación metodológica.</li>
+
+                <li>Predominio de algunas estrategias tradicionales.</li>
+
+                <li>Necesidad de capacitación en herramientas educativas.</li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- INSTITUCIÓN -->
+
+        <div class="tarjeta institucion-card">
+
+            <h3>🏫 Institución</h3>
+
+            <ul>
+
+                <li>Necesidad de fortalecer la innovación educativa.</li>
+
+                <li>Uso limitado de recursos tecnológicos.</li>
+
+                <li>Necesidad de diversificar los espacios de aprendizaje.</li>
+
+                <li>Fortalecimiento de proyectos educativos innovadores.</li>
+
+                <li>Promoción del uso pedagógico de la tecnología.</li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- COMUNIDAD -->
+
+        <div class="tarjeta comunidad">
+
+            <h3>👨‍👩‍👧‍👦 Comunidad</h3>
+
+            <ul>
+
+                <li>Participación limitada de algunas familias.</li>
+
+                <li>Necesidad de fortalecer la comunicación familia-escuela.</li>
+
+                <li>Poco acompañamiento en determinadas actividades.</li>
+
+                <li>Acceso desigual a recursos educativos digitales.</li>
+
+                <li>Necesidad de mayor participación comunitaria.</li>
+
+            </ul>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ANÁLISIS
+====================================================== -->
+
+<section class="seccion">
+
+    <h2>🔎 4. Análisis de las problemáticas identificadas</h2>
+
+    <p>
+        Después de realizar la lluvia de ideas, se seleccionaron algunas
+        situaciones que presentan relación directa con el proceso de
+        enseñanza y aprendizaje.
+    </p>
+
+
+    <table>
+
+        <tr>
+
+            <th>Contexto</th>
+
+            <th>Problemática identificada</th>
+
+            <th>Posible consecuencia</th>
+
+        </tr>
+
+
+        <tr>
+
+            <td>Estudiantes</td>
+
+            <td>
+                Baja motivación durante el proceso de aprendizaje.
+            </td>
+
+            <td>
+                Menor participación e interés en las actividades.
+            </td>
+
+        </tr>
+
+
+        <tr>
+
+            <td>Estudiantes</td>
+
+            <td>
+                Dificultad para mantener la atención.
+            </td>
+
+            <td>
+                Menor concentración durante las actividades educativas.
+            </td>
+
+        </tr>
+
+
+        <tr>
+
+            <td>Docentes</td>
+
+            <td>
+                Uso limitado de estrategias didácticas innovadoras.
+            </td>
+
+            <td>
+                Menor variedad de actividades dinámicas e interactivas.
+            </td>
+
+        </tr>
+
+
+        <tr>
+
+            <td>Institución</td>
+
+            <td>
+                Uso limitado de recursos tecnológicos.
+            </td>
+
+            <td>
+                Menores oportunidades para incorporar nuevas formas
+                de aprendizaje.
+            </td>
+
+        </tr>
+
+
+        <tr>
+
+            <td>Comunidad</td>
+
+            <td>
+                Participación limitada de algunas familias.
+            </td>
+
+            <td>
+                Menor acompañamiento del aprendizaje fuera del aula.
+            </td>
+
+        </tr>
+
+
+    </table>
+
+</section>
+
+
+<!-- =====================================================
+     PROBLEMÁTICA SELECCIONADA
+====================================================== -->
+
+<section class="seccion">
+
+    <h2>⭐ 5. Problemática seleccionada</h2>
+
+    <p>
+        Después de analizar las diferentes situaciones identificadas,
+        se seleccionó aquella que presenta una relación directa entre
+        la motivación de los estudiantes y las estrategias utilizadas
+        durante el proceso de aprendizaje.
+    </p>
+
+
+    <div class="problema">
+
+        <div class="icono">🎯</div>
+
+        <h3>Problema central</h3>
+
+        <p>
+            Baja motivación de los estudiantes de Séptimo Año de
+            Educación General Básica, paralelo “B”, de la Unidad
+            Educativa “Chiriboga” de la ciudad de Riobamba, durante
+            el proceso de aprendizaje, debido al uso limitado de
+            estrategias didácticas innovadoras.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     JUSTIFICACIÓN
+====================================================== -->
+
+<section class="seccion">
+
+    <h2>📌 6. Justificación de la problemática</h2>
+
+    <div class="justificacion">
+
+        <p>
+            Se seleccionó esta problemática porque la motivación de los
+            estudiantes constituye un aspecto importante para favorecer
+            su participación e interés durante el proceso de aprendizaje.
+        </p>
+
+        <p>
+            El uso limitado de estrategias didácticas innovadoras puede
+            reducir las oportunidades de desarrollar actividades más
+            dinámicas, participativas e interactivas. Por esta razón,
+            resulta pertinente analizar esta situación en los estudiantes
+            de Séptimo Año de Educación General Básica, paralelo “B”.
+        </p>
+
+        <p>
+            La problemática seleccionada puede ser abordada posteriormente
+            mediante un proyecto de innovación educativa que incorpore
+            estrategias activas y recursos didácticos que permitan
+            favorecer la participación y motivación de los estudiantes.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     POSIBLE ORIENTACIÓN
+====================================================== -->
+
+<section class="seccion">
+
+    <h2>💡 7. Posible orientación del proyecto de innovación</h2>
+
+    <p>
+        A partir de la problemática identificada, el futuro proyecto
+        de innovación educativa podría considerar diferentes estrategias
+        para favorecer la motivación y participación de los estudiantes.
+    </p>
+
+
+    <div class="soluciones">
+
+
+        <div class="solucion">
+
+            <div class="icono">🎮</div>
+
+            <h3>Gamificación</h3>
+
+            <p>
+                Incorporar dinámicas y elementos de juego
+                en las actividades de aprendizaje.
+            </p>
+
+        </div>
+
+
+        <div class="solucion">
+
+            <div class="icono">💻</div>
+
+            <h3>Recursos digitales</h3>
+
+            <p>
+                Utilizar recursos tecnológicos e interactivos
+                como apoyo al aprendizaje.
+            </p>
+
+        </div>
+
+
+        <div class="solucion">
+
+            <div class="icono">🧩</div>
+
+            <h3>Actividades interactivas</h3>
+
+            <p>
+                Diseñar actividades que promuevan la participación
+                activa de los estudiantes.
+            </p>
+
+        </div>
+
+
+        <div class="solucion">
+
+            <div class="icono">👥</div>
+
+            <h3>Trabajo colaborativo</h3>
+
+            <p>
+                Promover actividades grupales para fortalecer
+                la participación y cooperación.
+            </p>
+
+        </div>
+
+
+        <div class="solucion">
+
+            <div class="icono">🤖</div>
+
+            <h3>Herramientas de IA</h3>
+
+            <p>
+                Explorar herramientas de inteligencia artificial
+                con una finalidad pedagógica y responsable.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CONCLUSIÓN
+====================================================== -->
+
+<section class="seccion conclusion">
+
+    <h2>✅ 8. Conclusión</h2>
+
+    <p>
+        La lluvia de ideas permitió identificar diferentes problemáticas
+        relacionadas con los estudiantes, docentes, institución y comunidad.
+        Posteriormente, se analizaron estas situaciones y se seleccionó
+        como problemática central la baja motivación de los estudiantes
+        de Séptimo Año de Educación General Básica, paralelo “B”, de la
+        Unidad Educativa “Chiriboga” de la ciudad de Riobamba, durante
+        el proceso de aprendizaje, debido al uso limitado de estrategias
+        didácticas innovadoras.
+    </p>
+
+    <p>
+        Esta problemática constituye un punto de partida para desarrollar
+        posteriormente una propuesta de innovación educativa orientada
+        a incorporar estrategias didácticas activas, participativas e
+        innovadoras que favorezcan el interés y la participación de
+        los estudiantes.
+    </p>
+
+</section>
+
+
+</div>
+
+
+<!-- =====================================================
+     PIE DE PÁGINA
+====================================================== -->
+
+<footer>
+
+    <p>
+        <strong>Instituto Superior Tecnológico American College</strong>
+    </p>
+
+    <p>
+        Gestión de Calidad Educativa
+    </p>
+
+    <p>
+        Docente: MSc. Cristhian Jonathan Baque Pincay
+    </p>
+
+    <p>
+        Estudiante: Roldan Chicaiza María Alicia
+    </p>
+
+    <p>
+        Unidad Educativa “Chiriboga” – Riobamba
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
